@@ -1,9 +1,13 @@
-import React from 'react';
+import React , {useContext} from 'react';
+import { GlobalContext } from '../Context/GlobalState';
 
 const Header = () => {
+
+  const { name } = useContext(GlobalContext);
+
   return (
     <h2>
-        Expense tracker
+        Expense tracker by {name}
     </h2> 
   )
 }
